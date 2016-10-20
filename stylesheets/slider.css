@@ -1,0 +1,70 @@
+body,ul,li,img,a{
+	margin:0;
+	padding:0;
+}
+ul,li{
+	list-style:none;
+}
+#slider{
+	position:absolute;
+	width:730px;
+	height:454px;
+	left:50%;
+	top:50%;
+	transform:translate(-50%,-50%);
+	overflow:hidden;
+}
+#img-list{
+	position:absolute;
+	width:5840px;
+	height:454px;
+	z-index:1;
+}
+#img-list a{
+	float:left;
+	display:block;
+	height:454px;
+	/* 去除<a>形成的图片间空隙 */
+}
+#pointer{
+	position:absolute;
+	left:50%;
+	bottom:10px;
+	transform:translateX(-50%);
+	z-index:2;
+}
+#pointer li{
+	float:left;
+	width:18px;
+	height:18px;
+	margin:0 2px;
+	background-color:#3e3e3e;
+	font:13px/18px 'Microsoft YaHei',sans-serif;
+	color:#FFF;
+	text-align:center;
+	border-radius:50%;
+	cursor:pointer;
+}
+#pointer li:first-child{
+	background-color:#b61b1f;
+}
+.arrow li{
+	display:none;
+	position:absolute;
+	width:28px;
+	height:62px;
+	top:50%;
+	margin-top:-31px;
+	font:400 22px/62px simsun;
+	text-align:center;
+	color:#FFF;
+	background:rgba(0,0,0,.2);
+	z-index:2;
+	cursor:pointer;
+}
+.arrow #next{
+	right:0;
+}
+#slider:hover .arrow li{
+	display:block;
+}
